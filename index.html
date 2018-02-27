@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>
+			Effective pull request reviews
+		</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section data-background-image="images/mesh.jpg" data-background-repeat="repeat">
+					<h1 style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Effective pull request reviews</h1>
+					<p style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">
+						<small>
+							<a href="http://mauricio.github.io/">Maurício Linhares</a> /
+							<a href="http://twitter.com/mauriciojr">@mauriciojr</a> /
+							<span style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Software Engineer at DigitalOcean</span>
+						</small>
+					</p>
+				</section>
+
+				<section>
+					<h1>Don't worry</h1>
+					<p>Been there, done that myself.</p>
+				</section>
+
+				<section>
+					<h1>Do not <span style="color: lightgreen">fly by</span></h1>
+					<p>As much as you might think your feedback is important, if it wasn't
+					asked, don't give it.</p>
+				</section>
+
+				<section>
+					<h1><span style="color: lightskyblue">Style</span> is not up for discussion</h1>
+					<p>
+						Have automated tools that make the style conformant to whatever
+						rules you have. If you're making comments about code style in a PR
+						the process has failed.
+					</p>
+				</section>
+
+				<section>
+					<h1>Have <span style="color: red">static analysis</span> tools available</h1>
+					<ul>
+						<li>Checkstyle</li>
+						<li>go vet</li>
+						<li>rubocop</li>
+						<li>jslint</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>If you don't understand, <span style="color: lightskyblue">ask</span></h1>
+					<p>
+						If the change is unclear or follows a pattern that is unknown
+						to you, ask for an explanation first before asking for it to be
+						done in a different way.
+					</p>
+				</section>
+
+				<section>
+					<h1>Call out <span style="color: orange">good stuff</span></h1>
+					<p>
+						Found something cool? Learned something new?
+						Call it out, it's great to get a +1 on reviews.
+					</p>
+				</section>
+
+				<section>
+					<h1>Do not <span style="color: lightgreen">nitpick</span></h1>
+					<p>
+						If the only comment you could possibly make has
+						no real effect on the final result, do not make it.
+						You're not getting points for participating.
+					</p>
+				</section>
+
+				<section>
+					<h1>Be nice</h1>
+					<p>
+						I mean, be an empathetic human being, you're not fighting
+						the other person, you are all responsible for the codebase
+						together, provide useful, constructive feedback and learn
+						with the code that's being provided.
+					</p>
+				</section>
+
+				<section>
+					<h1>That's it</h1>
+					<p>
+						<img src="images/dancing-zebra.gif"/>
+					</p>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
